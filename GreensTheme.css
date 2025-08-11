@@ -241,7 +241,7 @@
     background: url('plants\ in\ table.jpg') no-repeat center center/cover;
     gap: 20px;
     padding: 60px 20px;
-    background: #e6f0e9;
+    background: #000000;
     flex-wrap: wrap;
   }
   
@@ -413,12 +413,13 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    background: #e8f5e9;
+    background: #000000;
     padding: 50px 20px;
   }
   
   .offer-text {
     max-width: 500px;
+    padding-left: 100px;
   }
   
   .offer-text h2 {
@@ -429,6 +430,7 @@
   .offer-text p {
     font-size: 1.5rem;
     margin: 10px 0 20px;
+    color: white;
   }
   
   .highlight {
@@ -447,8 +449,9 @@
   
   .offer-image img {
     width: 100%;
-    max-width: 400px;
+    max-width: 700px;
     border-radius: 12px;
+    
   }
   
   /* Testimonials */
