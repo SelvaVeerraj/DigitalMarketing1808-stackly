@@ -14,7 +14,7 @@
     background: url('banner-image.jpg') no-repeat center center/cover;
     padding: 30px 20px;
     color: rgba(0, 0, 0, 0);
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -26,7 +26,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background-color: rgba(0, 0, 0, 0.656); /* Green with 50% opacity */
     
 }
@@ -142,26 +142,92 @@
     font-size: 0.95rem;
   }
   
-  /* Responsive */
-  @media (max-width: 768px) {
-    .navbar {
-      flex-direction: column;
-      gap: 10px;
-    }
-  
-    .nav-links {
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-  
-    .hero-content h1 {
-      font-size: 2rem;
-    }
-  
-    .stats {
-      justify-content: center;
-    }
+  /* Tablet view */
+@media (max-width: 1024px) {
+  .hero-content h1 {
+    font-size: 300%;
   }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .stats {
+    justify-content: center;
+  }
+
+  .logo > img {
+    width: 200px;
+    height: auto;
+  }
+
+  .nav-links {
+    gap: 15px;
+  }
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: 200%;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .stats {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .stat-box {
+    width: 80%;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 150%;
+  }
+
+  .hero-content p {
+    font-size: 0.9rem;
+  }
+
+  .nav-btn {
+    padding: 8px 14px;
+    font-size: 0.9rem;
+  }
+
+  .overlay1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 165vh;
+    background-color: rgba(0, 0, 0, 0.656); /* Green with 50% opacity */
+  }
+}
+
   
 
   .why-shop {
