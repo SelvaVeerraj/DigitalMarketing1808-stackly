@@ -218,6 +218,12 @@
     font-size: 0.9rem;
   }
 
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    padding-right: 20px;
+  }
+
   .overlay1 {
     position: absolute;
     top: 0;
@@ -225,6 +231,11 @@
     width: 100%;
     height: 165vh;
     background-color: rgba(0, 0, 0, 0.656); /* Green with 50% opacity */
+  }
+
+  .stat-box {
+    width: 80%;
+    margin-top: 5px;
   }
 }
 
@@ -308,23 +319,109 @@
     color: #555;
   }
   
-  /* Responsive Layout */
-  @media (max-width: 768px) {
-    .why-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .feature, .center-image {
-      text-align: center;
-    }
-  
-    .center-image img {
-      max-width: 150px;
-      margin: 20px 0;
-    }
+  /* Tablet & below */
+@media (max-width: 1024px) {
+  .subheading {
+    padding: 40px;
+    font-size: 0.95rem;
   }
+
+  .why-container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto auto;
+  }
+
+  .center-image {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+
+  .left-top,
+  .right-top,
+  .left-bottom,
+  .right-bottom {
+    grid-column: span 1;
+    text-align: center;
+  }
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  .subheading {
+    padding: 20px;
+    font-size: 0.9rem;
+  }
+
+  .why-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .center-image {
+    grid-column: auto;
+    grid-row: auto;
+    margin: 20px 0;
+  }
+
+  .feature {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .feature h4 {
+    font-size: 1rem;
+  }
+
+  .feature p {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 426px) {
+  .why-shop {
+    padding: 40px 10px;
+    margin-top: 400px;
+  }
+
+  .why-shop h2 {
+    font-size: 1.5rem;
+  }
+
+  .subheading {
+    padding: 10px;
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+
+  .why-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* equal spacing */
+  }
+
+  .center-image img {
+    order: -1; /* optional: put image on top */
+    margin: 15px 0;
+  }
+
+  .feature {
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+  }
+
+  .feature h4 {
+    font-size: 1rem;
+    margin-bottom: 5px;
+  }
+
+  .feature p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+}
+
 
   .plant-categories {
     display: flex;
@@ -1427,6 +1524,7 @@
 
 .footer-content .logo {
   height: 40px;
+  margin-top: 20px;
 }
 
 .footer-content p {
