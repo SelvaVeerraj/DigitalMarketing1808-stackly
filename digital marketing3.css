@@ -220,7 +220,7 @@ body {
     flex-direction: column;
     gap: 10px;
     padding-right: 20px;
-    margin-top: 250px;
+    margin-top: 50px;
   }
 
   .overlay1 {
@@ -234,7 +234,7 @@ body {
 
   .stat-box {
     width: 80%;
-    margin-top: 5px;
+    margin-top: 200px;
   }
 }
 
